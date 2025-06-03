@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
+  <title>Picture this!</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,11 +12,30 @@
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
+      <h2>My Really Cool Blog Post</h2>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
 
-  </header>
+    <picture>
+      <source media="(max-width: 959px)" srcset="images/landscape-320.jpg 320w,
+  images/landscape-480.jpg 480w,
+  images/landscape-640.jpg 640w,
+  images/landscape-720.jpg 720w,
+  images/landscape-960.jpg 960w,
+  images/landscape-1440.jpg 1440w,
+  images/landscape-2160.jpg 2160w,
+  images/landscape-2880.jpg 2880w" sizes="100vw">
+
+      <source media="(min-width: 960px)" srcset="
+  images/square-480.jpg 480w,
+  images/square-640.jpg 640w,
+  images/square-800.jpg 800w,
+  images/square-960.jpg 960w,
+  images/square-1440.jpg 1440w,
+  images/square-2400.jpg 2400w" sizes="50vw">
+
+      <img src="images/museum.jpg" alt="Museum photo">
+    </picture>
+
 </body>
 
 </html>
